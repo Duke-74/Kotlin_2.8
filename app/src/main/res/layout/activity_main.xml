@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Стороны прямоугольного параллелепипед \na = "
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/sideA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/textA"/>
+
+    <TextView
+        android:id="@+id/textB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="b = "
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/sideA"/>
+
+    <EditText
+        android:id="@+id/sideB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/textB"/>
+
+    <TextView
+        android:id="@+id/textC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="c = "
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/sideB"/>
+
+    <EditText
+        android:id="@+id/sideC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/textC"/>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/sideC"
+        android:entries="@array/mathFun"
+        />
+
+    <Button
+        android:id="@+id/getSolution"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:text="Найти"
+        app:layout_constraintTop_toBottomOf="@+id/spinner"/>
+
+    <TextView
+        android:id="@+id/solution"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/getSolution"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
